@@ -1,0 +1,366 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#111;
+    color:white;
+    overflow-x:hidden;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:35px;
+    font-weight:700;
+    color:#ffd369;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd369;
+}
+section{
+    min-height:100vh;
+    position:relative;
+    padding:120px 8% 60px;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.65);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+}
+#home{
+    background-image:url('home.jpeg');
+    display:flex;
+    align-items:center;
+}
+
+#home h1{
+    font-size:70px;
+    color:#ffd369;
+    margin-bottom:20px;
+}
+
+#home p{
+    font-size:20px;
+    line-height:1.8;
+    max-width:700px;
+    margin-bottom:30px;
+}
+
+#home button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ffd369;
+    color:#111;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+#home button:hover{
+    transform:scale(1.05);
+    background:white;
+}
+#about{
+    background-image:url('teto.jpeg');
+}
+
+#about h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:20px;
+    color:#ffd369;
+}
+
+#about p{
+    text-align:center;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.about-box{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.about-box:hover{
+    transform:translateY(-10px);
+}
+
+.about-box h3{
+    color:#ffd369;
+    margin-bottom:15px;
+}
+#books{
+    background-image:url('books.jpeg');
+}
+
+#books h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:50px;
+    color:#ffd369;
+}
+
+.books-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.book-card{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.book-card:hover{
+    transform:translateY(-10px);
+}
+
+.book-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.book-card h3{
+    padding:15px;
+    color:#ffd369;
+    font-size:22px;
+}
+
+.book-card p{
+    padding:0 15px;
+    line-height:1.7;
+}
+
+.book-card button{
+    margin:20px 15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ffd369;
+    color:#111;
+    cursor:pointer;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.book-card button:hover{
+    background:white;
+}
+#register{
+    background-image:url('register.jpeg');
+}
+
+#register h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:40px;
+    color:#ffd369;
+}
+
+form{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+}
+
+form input,
+form select,
+form textarea{
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+    color:#ddd;
+}
+
+form textarea{
+    min-height:150px;
+    resize:none;
+}
+
+.upload,
+.card-image,
+form textarea,
+form button{
+    grid-column:1/3;
+}
+
+.card-image{
+    text-align:center;
+}
+
+.card-image img{
+    width:300px
+}
+
+.upload{
+    color:#ffd369;
+    font-weight:600;
+}
+
+form button{
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    background:#ffd369;
+    color:#111;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+form button:hover{
+    background:white;
+    transform:scale(1.03);
+}
+#contact{
+    background-image:url('contact.jpeg');
+}
+
+#contact h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:40px;
+    color:#ffd369;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.contact-box{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    text-align:center;
+    transition:0.4s;
+}
+
+.contact-box:hover{
+    transform:translateY(-10px);
+}
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    color:#aaa;
+}
+@media(max-width:992px){
+
+    .books-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    form{
+        grid-template-columns:1fr;
+    }
+
+    .upload,
+    .card-image,
+    form textarea,
+    form button{
+        grid-column:auto;
+    }
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 10px;
+        font-size:15px;
+    }
+
+    #home h1{
+        font-size:45px;
+    }
+
+    #home p{
+        font-size:17px;
+    }
+
+    #about h2,
+    #books h2,
+    #register h2,
+    #contact h2{
+        font-size:38px;
+    }
+
+    .books-container{
+        grid-template-columns:1fr;
+    }
+}
